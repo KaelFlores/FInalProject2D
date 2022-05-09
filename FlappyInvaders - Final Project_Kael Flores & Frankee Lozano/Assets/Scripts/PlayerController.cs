@@ -22,6 +22,20 @@ public class PlayerController : MonoBehaviour
     {
         vertical = Input.GetAxis("Vertical");
 
+        if (Input.GetKey(KeyCode.W))
+        {
+            animator.SetTrigger("Look_Up");
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            animator.SetTrigger("Look_Down");
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            animator.SetTrigger("Idle");
+        }
     }
 
     private void FixedUpdate()
