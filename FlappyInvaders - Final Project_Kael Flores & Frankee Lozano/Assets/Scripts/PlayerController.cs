@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     float vertical;
     public float speed = 5.0f;
 
+    public GameObject projectilePrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,10 @@ public class PlayerController : MonoBehaviour
     {
         vertical = Input.GetAxis("Vertical");
 
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Launch();
+        }
     }
 
     private void FixedUpdate()
@@ -29,5 +35,12 @@ public class PlayerController : MonoBehaviour
         Vector2 position = rb2D.position;
         position.y = position.y + speed * vertical * Time.deltaTime;
         rb2D.MovePosition(position);
+    }
+
+    void Launch()
+    {
+        GameObject projectileObject = Instantiate(projectilePrefab, rb2D.position + Vector2.up * 0.5f, Quaternion.identity);
+
+        Projectile projectile = projectileObject.GetComponent<Projectile>();
     }
 }
