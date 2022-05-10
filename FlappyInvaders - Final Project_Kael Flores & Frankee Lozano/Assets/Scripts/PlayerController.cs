@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         vertical = Input.GetAxis("Vertical");
+
     }
 
     private void FixedUpdate()
