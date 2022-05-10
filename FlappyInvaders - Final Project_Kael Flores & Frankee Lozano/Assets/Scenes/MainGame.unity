@@ -413,6 +413,7 @@ GameObject:
   - component: {fileID: 1029938659}
   - component: {fileID: 1029938661}
   - component: {fileID: 1029938660}
+  - component: {fileID: 1029938662}
   m_Layer: 0
   m_Name: sapced-pixilart (3)
   m_TagString: Untagged
@@ -511,6 +512,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1029938662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029938658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f10ec2f29acc0d47a0e675d389800ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1383234138
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,6 +673,7 @@ GameObject:
   - component: {fileID: 1762635795}
   - component: {fileID: 1762635796}
   - component: {fileID: 1762635797}
+  - component: {fileID: 1762635798}
   m_Layer: 0
   m_Name: sapced-pixilart (2)
   m_TagString: Untagged
@@ -758,6 +772,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1762635798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762635794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f10ec2f29acc0d47a0e675d389800ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2043250045
 GameObject:
   m_ObjectHideFlags: 0
