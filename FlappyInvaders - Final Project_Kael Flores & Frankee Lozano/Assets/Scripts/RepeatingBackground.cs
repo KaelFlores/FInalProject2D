@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RepeatingBackground : MonoBehaviour
 {
+    private BoxCollider2D g
     // Start is called before the first frame update
     void Start()
     {
