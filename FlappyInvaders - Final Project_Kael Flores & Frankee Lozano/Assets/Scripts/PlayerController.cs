@@ -12,11 +12,15 @@ public class PlayerController : MonoBehaviour
 
     public GameObject projectilePrefab;
 
+    AudioSource audioSource;
+    public AudioClip whoosh;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -49,5 +53,10 @@ public class PlayerController : MonoBehaviour
 
             transform.position = temp;
         }
-    } 
+        PlaySound(whoosh);
+    }
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+    }
 }
