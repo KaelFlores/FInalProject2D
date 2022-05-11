@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     Rigidbody2D rb2D;
 
-    float vertical;
     public float speed = 5.0f;
+    public float min_Y, max_Y;
 
     public GameObject projectilePrefab;
 
@@ -22,25 +22,32 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        vertical = Input.GetAxis("Vertical");
+        MovePlayer();
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Launch();
+
         }
     }
 
-    private void FixedUpdate()
+    void MovePlayer()
     {
-        Vector2 position = rb2D.position;
-        position.y = position.y + speed * vertical * Time.deltaTime;
-        rb2D.MovePosition(position);
-    }
+        if (Input.GetAxis("Vertical") > 0f)
+        {
+            Vector3 temp = transform.position;
+            temp.y += speed * Time.deltaTime;
 
-    void Launch()
-    {
-        GameObject projectileObject = Instantiate(projectilePrefab, rb2D.position + Vector2.up * 0.5f, Quaternion.identity);
+            if (temp.y > max_Y)
+                temp.y = max_Y;
 
-        Projectile projectile = projectileObject.GetComponent<Projectile>();
-    }
+            transform.position = temp;
+        } else if (Input.GetAxis("Vertical") < 0f)
+        {
+            Vector3 temp = transform.position;
+
+            temp.y -= speed * Time.deltaTime;
+
+            transform.position = temp;
+        }
+    } 
 }
