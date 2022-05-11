@@ -1151,12 +1151,9 @@ GameObject:
   - component: {fileID: 1383234141}
   - component: {fileID: 1383234140}
   - component: {fileID: 1383234139}
-  - component: {fileID: 1383234143}
-<<<<<<< Updated upstream
-  - component: {fileID: 1383234144}
-=======
   - component: {fileID: 1383234142}
->>>>>>> Stashed changes
+  - component: {fileID: 1383234143}
+  - component: {fileID: 1383234144}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1242,13 +1239,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383234138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-=======
-  m_LocalPosition: {x: -9.0229, y: 0.1488, z: 0}
-  m_LocalScale: {x: 3.824, y: 4.1092124, z: 4}
->>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
