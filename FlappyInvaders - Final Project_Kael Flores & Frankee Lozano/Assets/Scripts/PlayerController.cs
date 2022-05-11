@@ -26,11 +26,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-<<<<<<< HEAD
-            Launch();
-=======
 
->>>>>>> d89bdfbb67acdfba7ef5072273464cbceef9b9d1
         }
     }
 
