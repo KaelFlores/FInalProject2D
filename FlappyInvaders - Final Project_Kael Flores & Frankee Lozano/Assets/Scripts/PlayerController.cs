@@ -37,8 +37,14 @@ public class PlayerController : MonoBehaviour
             Vector3 temp = transform.position;
             temp.y += speed * Time.deltaTime;
 
+<<<<<<< Updated upstream
             if (temp.y > max_Y)
                 temp.y = max_Y;
+=======
+    void Launch()
+    {
+        GameObject projectileObject = Instantiate(projectilePrefab, rb2D.position + Vector2.right * 0.5f, Quaternion.identity);
+>>>>>>> Stashed changes
 
             transform.position = temp;
         } else if (Input.GetAxis("Vertical") < 0f)
