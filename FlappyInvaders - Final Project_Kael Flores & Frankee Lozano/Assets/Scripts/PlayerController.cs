@@ -14,11 +14,16 @@ public class PlayerController : MonoBehaviour
 
     public Transform attack_Point;
 
+    public float attack_Timer = 1f;
+    private float current_Attack_Timer;
+    private bool canAttack;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
+        current_Attack_Timer = attack_Timer;
     }
 
     // Update is called once per frame
@@ -26,11 +31,6 @@ public class PlayerController : MonoBehaviour
     {
         MovePlayer();
         Attack();
-
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-
-        }
     }
 
     void MovePlayer()
@@ -56,9 +56,20 @@ public class PlayerController : MonoBehaviour
 
     void Attack()
     {
-        if(Input.GetKeyDown(KeyCode.C))
+        attack_Timer += Time.deltaTime;
+        if (attack_Timer > current_Attack_Timer)
         {
-            Instantiate(projectile, attack_Point.position, Quaternion.identity);
+            canAttack = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            if(canAttack)
+            {
+                canAttack = false;
+                attack_Timer = 0f;
+                Instantiate(projectile, attack_Point.position, Quaternion.identity);
+            }
         }
     }
 }
