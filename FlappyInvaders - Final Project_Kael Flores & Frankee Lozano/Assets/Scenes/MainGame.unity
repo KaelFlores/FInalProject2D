@@ -1281,6 +1281,7 @@ MonoBehaviour:
   speed: 4
   min_Y: 6
   max_Y: 6
+<<<<<<< HEAD
   projectilePrefab: {fileID: 5847972048025693909, guid: 0d6bd93359bc7354a86b449a64d5606f, type: 3}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1289,6 +1290,10 @@ MonoBehaviour:
 >>>>>>> parent of 77aafcb (Shooting)
 =======
 >>>>>>> parent of 77aafcb (Shooting)
+=======
+  projectile: {fileID: 5847972048025693909, guid: 0d6bd93359bc7354a86b449a64d5606f, type: 3}
+  attack_Point: {fileID: 187471298}
+>>>>>>> parent of 4c577b1 (as)
 --- !u!61 &1383234144
 BoxCollider2D:
   m_ObjectHideFlags: 0
