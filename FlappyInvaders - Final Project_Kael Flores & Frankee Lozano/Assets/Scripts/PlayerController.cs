@@ -11,9 +11,12 @@ public class PlayerController : MonoBehaviour
     public float min_Y, max_Y;
 
     public GameObject projectilePrefab;
+<<<<<<< HEAD
 
     AudioSource audioSource;
     public AudioClip whoosh;
+=======
+>>>>>>> parent of 77aafcb (Shooting)
 
     // Start is called before the first frame update
     void Start()
@@ -54,9 +57,13 @@ public class PlayerController : MonoBehaviour
 
             transform.position = temp;
         }
+<<<<<<< HEAD
     }
     public void PlaySound(AudioClip clip)
     {
         audioSource.PlayOneShot(clip);
     }
+=======
+    } 
+>>>>>>> parent of 77aafcb (Shooting)
 }
