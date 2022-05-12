@@ -45,7 +45,8 @@ public class PlayerController : MonoBehaviour
                 temp.y = max_Y;
 
             transform.position = temp;
-        } else if (Input.GetAxis("Vertical") < 0f)
+        }
+        else if (Input.GetAxis("Vertical") < 0f)
         {
             Vector3 temp = transform.position;
 
@@ -53,7 +54,6 @@ public class PlayerController : MonoBehaviour
 
             transform.position = temp;
         }
-        PlaySound(whoosh);
     }
     public void PlaySound(AudioClip clip)
     {
