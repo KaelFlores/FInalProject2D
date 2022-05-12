@@ -12,9 +12,12 @@ public class PlayerController : MonoBehaviour
 
     public GameObject projectilePrefab;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     AudioSource audioSource;
     public AudioClip whoosh;
+=======
+>>>>>>> parent of 77aafcb (Shooting)
 =======
 >>>>>>> parent of 77aafcb (Shooting)
 
@@ -58,11 +61,15 @@ public class PlayerController : MonoBehaviour
             transform.position = temp;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
     public void PlaySound(AudioClip clip)
     {
         audioSource.PlayOneShot(clip);
     }
+=======
+    } 
+>>>>>>> parent of 77aafcb (Shooting)
 =======
     } 
 >>>>>>> parent of 77aafcb (Shooting)
