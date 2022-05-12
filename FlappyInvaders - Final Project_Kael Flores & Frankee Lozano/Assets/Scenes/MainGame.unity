@@ -1282,6 +1282,7 @@ MonoBehaviour:
   min_Y: 6
   max_Y: 6
   projectilePrefab: {fileID: 5847972048025693909, guid: 0d6bd93359bc7354a86b449a64d5606f, type: 3}
+  whoosh: {fileID: 8300000, guid: 4ce8d1b6441ad684fae71207bd99c9e3, type: 3}
 --- !u!61 &1383234144
 BoxCollider2D:
   m_ObjectHideFlags: 0
