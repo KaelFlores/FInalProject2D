@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed = 5f;
-    public float deactivate_Timer = 3f;
+    Rigidbody2D rigidbody2d;
     // Start is called before the first frame update
     void Awake()
     {
-
+        rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if (transform.position.magnitude > 5000.0f)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    void Move()
+    public void Launch(Vector2 direction, float force)
     {
-        Vector3 temp = transform.position;
-        temp.x += speed * Time.deltaTime;
-        transform.position = temp;
+        rigidbody2d.AddForce(direction * force);
     }
 }
