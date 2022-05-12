@@ -10,7 +10,9 @@ public class PlayerController : MonoBehaviour
     public float speed = 5.0f;
     public float min_Y, max_Y;
 
-    public GameObject projectilePrefab;
+    public GameObject projectile;
+
+    public Transform attack_Point;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         MovePlayer();
+        Attack();
 
         if (Input.GetKeyDown(KeyCode.C))
         {
@@ -50,4 +53,12 @@ public class PlayerController : MonoBehaviour
             transform.position = temp;
         }
     } 
+
+    void Attack()
+    {
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            Instantiate(projectile, attack_Point.position, Quaternion.identity);
+        }
+    }
 }
