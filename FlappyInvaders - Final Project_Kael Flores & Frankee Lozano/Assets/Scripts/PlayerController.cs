@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
             canAttack = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if(canAttack)
             {
