@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     AudioSource audioSource;
     public AudioClip whoosh;
+    public AudioClip pew;
 
     // Start is called before the first frame update
     void Start()
@@ -78,6 +79,7 @@ public class PlayerController : MonoBehaviour
                 canAttack = false;
                 attack_Timer = 0f;
                 Instantiate(projectile, attack_Point.position, Quaternion.identity);
+                PlaySound(pew);
             }
         }
     }
