@@ -18,12 +18,16 @@ public class PlayerController : MonoBehaviour
     private float current_Attack_Timer;
     private bool canAttack;
 
+    AudioSource audioSource;
+    public AudioClip whoosh;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
         current_Attack_Timer = attack_Timer;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -44,13 +48,18 @@ public class PlayerController : MonoBehaviour
                 temp.y = max_Y;
 
             transform.position = temp;
-        } else if (Input.GetAxis("Vertical") < 0f)
+
+            PlaySound(whoosh);
+        } 
+        
+        else if (Input.GetAxis("Vertical") < 0f)
         {
             Vector3 temp = transform.position;
 
             temp.y -= speed * Time.deltaTime;
 
             transform.position = temp;
+            PlaySound(whoosh);
         }
     } 
 
@@ -71,5 +80,10 @@ public class PlayerController : MonoBehaviour
                 Instantiate(projectile, attack_Point.position, Quaternion.identity);
             }
         }
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 }
