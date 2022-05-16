@@ -29,4 +29,13 @@ public class Projectile : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
+     void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<EnemyController>() != null)
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }
