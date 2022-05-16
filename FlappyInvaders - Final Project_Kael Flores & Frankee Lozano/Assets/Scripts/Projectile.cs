@@ -24,4 +24,9 @@ public class Projectile : MonoBehaviour
         temp.x += speed * Time.deltaTime;
         transform.position = temp;
     }
+
+    void DeactivateGameObject()
+    {
+        gameObject.SetActive(false);
+    }
 }
