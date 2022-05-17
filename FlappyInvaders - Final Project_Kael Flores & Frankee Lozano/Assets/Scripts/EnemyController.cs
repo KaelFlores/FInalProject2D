@@ -23,8 +23,8 @@ public class EnemyController : MonoBehaviour
     {
         if(collision.CompareTag("Bullet"))
         {
-            Destroy(gameObject);
             animator.SetTrigger("Explosion");
+            Destroy(gameObject);
         }
     }
 }
