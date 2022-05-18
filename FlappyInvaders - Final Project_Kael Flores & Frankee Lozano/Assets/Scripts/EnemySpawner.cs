@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject Enemies;
+    public GameObject[] Enemies;
+    public GameObject Enemy;
     float maxSpawnRateInSeconds = 5f;
-    public Transform spawnpoint;
+    public float EnemyMin = -1f;
+    public float EnemyMax = 5f;
+    private Vector2 objectPoolPosition = new Vector2(27, 1);
+    private float spawnXPosition = 10f;
+    private int currentEnemy = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        Instantiate(Enemies, spawnpoint.position, Quaternion.identity);
+        Instantiate(Enemy, objectPoolPosition, Quaternion.identity);
 
         ScheduleNextEnemySpawn();
     }
@@ -33,10 +38,11 @@ public class EnemySpawner : MonoBehaviour
 
         if (maxSpawnRateInSeconds > 1f)
         {
-            spawninNSeconds = Random.Range(1f, maxSpawnRateInSeconds);
+
+            float spawnYPosition = Random.Range(EnemyMin, EnemyMax);
+
+            Enemies[currentEnemy].transform.position = new Vector2(spawnXPosition, spawnYPosition);
+
         }
-        else
-            spawninNSeconds = 1f;
-        Invoke("SpawnEnemy", spawninNSeconds);
     }
 }
