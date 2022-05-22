@@ -4,29 +4,11 @@ using UnityEngine;
 
 public class Planets : MonoBehaviour
 { 
-    public float minWait;
-    public float maxWait;
-
-    private bool isSpawning;
-
-    void Awake()
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.GetComponent<PlayerController>() !=null)
         {
-            isSpawning = false;
+            GameController.instance.ShipGetsPoints();
         }
-
-    void Update()
-        {
-        if (!isSpawning)
-            {
-            float timer = Random.Range(minWait, maxWait);
-            Invoke("SpawnObject", timer);
-            isSpawning = true;
-            }
-        }
-
-    void SpawnObject()
-        {
-        isSpawning = false;
-        }
-   
+    }
 }
