@@ -11,8 +11,8 @@ public class PlanetPool : MonoBehaviour
     public float planetMax = 3.5f;
     private GameObject[] planet;
     private int currentplanet = 0;
-    private Vector2 objectPoolPosition = new Vector2(20, -5);
-    private float spawnXPosition = 20f;
+    private Vector2 objectPoolPosition = new Vector2(25, -5);
+    private float spawnXPosition = 30f;
     private float timeSinceLastSpawned;
 
     // Start is called before the first frame update
