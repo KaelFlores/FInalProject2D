@@ -21,7 +21,7 @@ public class Projectile : MonoBehaviour
         transform.position += Vector3.right * speed * Time.deltaTime;
         if(transform.position.x > 25.0f || timeToDeactivate <= 0)
         {
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 
@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }

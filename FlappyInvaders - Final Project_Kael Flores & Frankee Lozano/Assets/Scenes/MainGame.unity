@@ -976,6 +976,10 @@ MonoBehaviour:
   timeUntilEnemy: 1
   minuntilEnemy: 0.5
   maxUntilEnemy: 3
+  scrollSpeed: -1.25
+  gameOver: 0
+  scoreText: {fileID: 0}
+  gameOvertext: {fileID: 0}
 --- !u!4 &723656906
 Transform:
   m_ObjectHideFlags: 0
@@ -1006,7 +1010,7 @@ MonoBehaviour:
   blasterToPool: {fileID: 0}
   crossBlastToPool: {fileID: 0}
   sparkBlastToPool: {fileID: 0}
-  amountOfEnemiesToPool: 10
+  amountOfEnemiesToPool: 3
   amountOfBlastersToPool: 0
   amountOfCrossBlastsToPool: 0
   amountOfSparkBlastsToPool: 0
@@ -1251,7 +1255,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 2
+  m_Constraints: 5
 --- !u!114 &1383234143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1272,6 +1276,7 @@ MonoBehaviour:
   attack_Timer: 0.5
   whoosh: {fileID: 8300000, guid: 4ce8d1b6441ad684fae71207bd99c9e3, type: 3}
   pew: {fileID: 8300000, guid: 9ada323e2358f2241850a2c1be0621a3, type: 3}
+  respawnSpeed: 8
 --- !u!61 &1383234144
 BoxCollider2D:
   m_ObjectHideFlags: 0

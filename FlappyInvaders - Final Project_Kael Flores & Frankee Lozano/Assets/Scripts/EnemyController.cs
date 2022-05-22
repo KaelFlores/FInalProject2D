@@ -33,6 +33,7 @@ public class EnemyController : MonoBehaviour
         {
             gameObject.SetActive(false);
             animator.SetTrigger("Explosion");
+            transform.position = new Vector3(30.0f, 0);
         }
     }
 }

@@ -41,24 +41,6 @@ public class ObjectPool : MonoBehaviour
             tmpEnemy.SetActive(false);
             pooledEnemies.Add(tmpEnemy);
         }
-        for (int i = 0; i < amountOfBlastersToPool; i++)
-        {
-            tmpBlaster = Instantiate(blasterToPool);
-            tmpBlaster.SetActive(false);
-            pooledBlasters.Add(tmpBlaster);
-        }
-        for (int i = 0; i < amountOfCrossBlastsToPool; i++)
-        {
-            tmpCrossBlast = Instantiate(crossBlastToPool);
-            tmpCrossBlast.SetActive(false);
-            pooledCrossBlasts.Add(tmpCrossBlast);
-        }
-        for (int i = 0; i < amountOfSparkBlastsToPool; i++)
-        {
-            tmpSparkBlast = Instantiate(sparkBlastToPool);
-            tmpSparkBlast.SetActive(false);
-            pooledSparkBlasts.Add(tmpSparkBlast);
-        }
     }
 
     public GameObject GetPooledEnemy()
@@ -68,42 +50,6 @@ public class ObjectPool : MonoBehaviour
             if (pooledEnemies[i].activeInHierarchy == false)
             {
                 return pooledEnemies[i];
-            }
-        }
-        return null;
-    }
-
-    public GameObject GetPooledBlaster()
-    {
-        for (int i = 0; i < amountOfBlastersToPool; i++)
-        {
-            if (pooledBlasters[i].activeInHierarchy == false)
-            {
-                return pooledBlasters[i];
-            }
-        }
-        return null;
-    }
-
-    public GameObject GetPooledCrossBlast()
-    {
-        for (int i = 0; i < amountOfCrossBlastsToPool; i++)
-        {
-            if (pooledCrossBlasts[i].activeInHierarchy == false)
-            {
-                return pooledCrossBlasts[i];
-            }
-        }
-        return null;
-    }
-
-    public GameObject GetPooledSparkBlast()
-    {
-        for (int i = 0; i < amountOfSparkBlastsToPool; i++)
-        {
-            if (pooledSparkBlasts[i].activeInHierarchy == false)
-            {
-                return pooledSparkBlasts[i];
             }
         }
         return null;
