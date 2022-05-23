@@ -13,8 +13,7 @@ public class EnemyController : MonoBehaviour
     {
         animator = gameObject.GetComponent<Animator>();
 
-        float randomPositionY = Random.Range(-4.0f, 4.0f);
-        transform.position = new Vector3(30.0f, randomPositionY, 0);
+        
     }
 
     // Update is called once per frame
@@ -23,6 +22,9 @@ public class EnemyController : MonoBehaviour
         transform.position += Vector3.left * movementSpeed * Time.deltaTime;
         if(transform.position.x < -10.0f)
         {
+            float randomPositionY = Random.Range(-5.0f, 5.0f);
+            transform.position = new Vector3(30.0f, randomPositionY, 0);
+
             gameObject.SetActive(false);
         }
     }
