@@ -918,7 +918,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418875879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.04, y: 1.18, z: -10}
+  m_LocalPosition: {x: 10.79, y: 1.18, z: -10}
   m_LocalScale: {x: -2, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1139,7 +1139,7 @@ MonoBehaviour:
   scrollSpeed: -1.25
   gameOver: 0
   scoreText: {fileID: 800985190}
-  gameOvertext: {fileID: 0}
+  gameOvertext: {fileID: 276366425}
 --- !u!4 &723656906
 Transform:
   m_ObjectHideFlags: 0
@@ -1167,7 +1167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyToPool: {fileID: 6979196633878305776, guid: 4f21bad67f4623943a179b7b6aedf0fa, type: 3}
-  amountOfEnemiesToPool: 3
+  amountOfEnemiesToPool: 20
 --- !u!114 &723656908
 MonoBehaviour:
   m_ObjectHideFlags: 0

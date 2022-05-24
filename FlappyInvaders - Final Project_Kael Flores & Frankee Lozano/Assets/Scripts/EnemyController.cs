@@ -22,7 +22,7 @@ public class EnemyController : MonoBehaviour
         transform.position += Vector3.left * movementSpeed * Time.deltaTime;
         if(transform.position.x < -10.0f)
         {
-            float randomPositionY = Random.Range(-5.0f, 5.0f);
+            float randomPositionY = Random.Range(-4.0f, 5.0f);
             transform.position = new Vector3(30.0f, randomPositionY, 0);
 
             gameObject.SetActive(false);
@@ -33,9 +33,10 @@ public class EnemyController : MonoBehaviour
     {
         if(collision.tag == "Bullet")
         {
+            float randomPositionY = Random.Range(-4.0f, 5.0f);
             gameObject.SetActive(false);
             animator.SetTrigger("Explosion");
-            transform.position = new Vector3(30.0f, 0);
+            transform.position = new Vector3(30.0f, randomPositionY, 0);
         }
     }
 }
