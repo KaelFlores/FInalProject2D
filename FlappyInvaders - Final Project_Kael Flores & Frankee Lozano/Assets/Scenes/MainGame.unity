@@ -1101,8 +1101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetsPrefab: {fileID: 1767941417363332320, guid: 067fa9ba19f05204cad598be14f92b32, type: 3}
-  planetPoolSize: 1
-  spawnRate: 10
+  planetPoolSize: 5
+  spawnRate: 20
   planetMin: -5
   planetMax: 4
 --- !u!1 &800985188

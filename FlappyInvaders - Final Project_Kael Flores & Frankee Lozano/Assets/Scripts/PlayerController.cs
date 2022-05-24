@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
     public AudioClip whoosh;
     public AudioClip pew;
     public float respawnSpeed = 8.0f;
-    private bool isRespawn = true;
 
     // Start is called before the first frame update
     void Start()
@@ -38,15 +37,6 @@ public class PlayerController : MonoBehaviour
     {
         MovePlayer();
         Attack();
-
-        if (isRespawn == true)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(0.5f, 1.95f), respawnSpeed * Time.deltaTime);
-            if (transform.position == new Vector3(0.5f, 1.95f, 0.0f))
-            {
-                isRespawn = false;
-            }
-        }
     }
     void MovePlayer()
     {
@@ -104,11 +94,10 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.tag == "Enemy" && isRespawn == false)
+        if (collider.tag == "Enemy")
         {
             animator.SetTrigger("Death");
-            transform.position = new Vector3(-10.0f, -0.25f, 0.0f);
-            isRespawn = true;
+            Destroy(gameObject);
         }
     }
 }
