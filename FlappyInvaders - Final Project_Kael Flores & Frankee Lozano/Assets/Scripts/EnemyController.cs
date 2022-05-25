@@ -6,7 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     Animator animator;
 
-    public float movementSpeed = 5.0f;
+    public float movementSpeed = 7.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -33,9 +33,9 @@ public class EnemyController : MonoBehaviour
     {
         if(collision.tag == "Bullet")
         {
-            float randomPositionY = Random.Range(-4.0f, 5.0f);
             gameObject.SetActive(false);
             animator.SetTrigger("Explosion");
+            float randomPositionY = Random.Range(-4.0f, 5.0f);
             transform.position = new Vector3(30.0f, randomPositionY, 0);
         }
     }

@@ -92,13 +92,11 @@ public class PlayerController : MonoBehaviour
         audioSource.PlayOneShot(clip);
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter2D()
     {
-        if (collider.tag == "Enemy")
-        {
-            animator.SetTrigger("Death");
-            Destroy(gameObject);
-        }
+        rb2D.velocity = Vector2.zero;
+        Destroy(gameObject);
+        GameController.instance.ShipCrash();
     }
 }
 
