@@ -6,7 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     Animator animator;
 
-    public float movementSpeed = 5.0f;
+    public float movementSpeed = 7.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class EnemyController : MonoBehaviour
         transform.position += Vector3.left * movementSpeed * Time.deltaTime;
         if(transform.position.x < -10.0f)
         {
-            float randomPositionY = Random.Range(-5.0f, 5.0f);
+            float randomPositionY = Random.Range(-4.0f, 5.0f);
             transform.position = new Vector3(30.0f, randomPositionY, 0);
 
             gameObject.SetActive(false);
@@ -35,7 +35,8 @@ public class EnemyController : MonoBehaviour
         {
             gameObject.SetActive(false);
             animator.SetTrigger("Explosion");
-            transform.position = new Vector3(30.0f, 0);
+            float randomPositionY = Random.Range(-4.0f, 5.0f);
+            transform.position = new Vector3(30.0f, randomPositionY, 0);
         }
     }
 }
